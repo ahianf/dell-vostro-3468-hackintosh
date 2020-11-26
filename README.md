@@ -28,6 +28,12 @@
     </tr>
   </tbody>
 </table>
+## Instructions
+
+You **must** add your own serialnumber. I recommend [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS). Remember to use `MacBookPro14,1`. 
+
+
+
 ## What is working
 
 ### Completely supported
@@ -80,11 +86,13 @@ Functioning with multigestures, but not detected in System Settings -> Touchpad
 
 Requires a workaround and is not detected.
 
-### Not working
-
 #### Sleep and Wake
 
-Not working, weird behavior (keyboard not working after sleep, fans still working)
+Working but weird behavior. Example, if a key if pressed when waking up, the keyboard will stop working correctly, and the key pressed will repeat indefinitely in the password field. A workaround is to press first the backspace key.
+
+Also Bluetooth freezes frecuently macOS when waking up, in fact is impossible to use Bluetooth audio after sleep.
+
+### Not working
 
 #### Battery
 
@@ -98,7 +106,23 @@ Internal SD card Reader
 
 HDMI output
 
-### Additional info, quirks, findings, etc 
+## Additional info, quirks, findings, etc 
 
 Remove kexts asociated with BCM94352Z(DW1560) if you do not have installed one.
+
+## Changelog
+
+##### 26/nov/2020: 
+
+Removed: `XHCI-unsupported.kext`because is not needed
+
+Added: `SMCDellSensors.kext`, `SMCProcessor.kext`, `SMCSuperIO.kext`for CPU and fan sensor support
+
+Fixed: Wrong iGPU in `DeviceProperties`
+
+Updated: Sleep and Wake findings
+
+##### 25/nov/2020: 
+
+First release
 
