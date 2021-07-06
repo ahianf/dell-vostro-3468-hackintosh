@@ -38,7 +38,7 @@ Use this a a starting point, this is no replacement of your own research, trial 
 
 Remove kexts asociated with BCM94352Z(DW1560) if you do not have installed one, and do a OCSnapshot in ProperTree to remove them from config.plist. 
 
-**Important:**You MUST remove the wifi card from the motherboard, fail to do so will result in bizarre kernel panics during installation, after that you can reinstall again the card.
+**Important:** You MUST remove the wifi card from the motherboard, fail to do so will result in bizarre kernel panics during installation, after that you can reinstall again the card.
 
 ## What is working
 
@@ -56,7 +56,7 @@ XCPM power management is native supported. HWP is fully enabled as well.
 
 This laptop comes with an Intel WiFi + Bluetooth combo so, I replaced mine with BCM94352Z (DM1560). Airport, Handoff are working correctly.
 
-If you have an Intel card, remove BCM-related kexts and start from there.
+###### Important: If you have an Intel card, remove BCM-related kexts and start from there.
 
 #### Camera
 
@@ -118,6 +118,12 @@ AirPortBrcm4360 only will load in Catalina (using `MaxKernel` = `19.9.9`). This 
 
 ## Changelog
 
+##### 06/jul/2021:
+
+Updated to OpenCore 0.7.1
+
+Kexts updated
+
 ##### 08/jun/2021:
 
 Updated to OpenCore 0.7.0
@@ -149,4 +155,3 @@ Updated: Sleep and Wake findings
 ##### 25/nov/2020: 
 
 First release
-
