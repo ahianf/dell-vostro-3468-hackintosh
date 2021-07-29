@@ -1,33 +1,8 @@
 <h1>macOS Catalina/Big Sur on Dell Vostro 3000 series using OpenCore</h1>
-<h2>Laptop Specs</h2>
-<table>
-  <thead>
-    <tr>
-      <td style="text-align: center">Feature</td>
-      <td style="text-align: center">Specification</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Model</td>
-      <td>Dell Vostro 3468</td>
-    </tr>
-    <tr>
-      <td>Processor type</td>
-      <td>Intel Core i5 7200U</td>
-    </tr>
-     <tr>
-      <td>VGA</td>
-      <td>Intel HD Graphics 620</td>
-    </tr>
-    <tr>
-      <td>Audio</td>
-      <td>Realtek ALC256 (layout-id: 21)</td>
-    </tr>
-    <tr>
-    </tr>
-  </tbody>
-</table>
+
+![dzfgv](https://user-images.githubusercontent.com/37314164/127522651-94c034cb-848d-43b6-9519-7aca059e20c0.png)
+![Captura de Pantalla 2021-07-29 a la(s) 11 12 00 a  m](https://user-images.githubusercontent.com/37314164/127522694-d163089f-451b-4621-840c-5d62fa7ee522.png)
+
 
 
 ## Instructions
@@ -115,6 +90,42 @@ HDMI output
 `CtlnaAHCIPort` is absolutely necesary to Big Sur. Using `MinKernel` this kext only loads in BirSur 
 
 AirPortBrcm4360 only will load in Catalina (using `MaxKernel` = `19.9.9`). This kext makes Big Sur unable to boot.
+
+<h2>Laptop Specs</h2>
+<table>
+  <thead>
+    <tr>
+      <td style="text-align: center">Feature</td>
+      <td style="text-align: center">Specification</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Model</td>
+      <td>Dell Vostro 3468</td>
+    </tr>
+    <tr>
+      <td>Processor type</td>
+      <td>Intel Core i5 7200U</td>
+    </tr>
+     <tr>
+      <td>VGA</td>
+      <td>Intel HD Graphics 620</td>
+    </tr>
+    <tr>
+      <td>Audio</td>
+      <td>Realtek ALC256 (layout-id: 21)</td>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+
+![Captura de Pantalla 2021-07-29 a la(s) 11 16 00 a  m](https://user-images.githubusercontent.com/37314164/127522685-8d8b5791-a97b-41ec-ba6d-51e70ba82f12.png)
+
+![Captura de Pantalla 2021-07-29 a la(s) 11 17 04 a  m](https://user-images.githubusercontent.com/37314164/127522701-539e44bc-73d7-4426-a8cf-9eee6fdcd7f6.png)
+
+![Captura de Pantalla 2021-07-29 a la(s) 11 16 35 a  m](https://user-images.githubusercontent.com/37314164/127522708-c5c77309-7c38-400f-8c13-59466aade2e3.png)
 
 ## Changelog
 
