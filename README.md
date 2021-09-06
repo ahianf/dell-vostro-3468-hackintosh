@@ -29,9 +29,10 @@ XCPM power management is native supported. HWP is fully enabled as well.
 
 #### Wi-Fi & Bluetooth
 
-This laptop comes with an Intel WiFi + Bluetooth combo so, I replaced mine with BCM94352Z (DM1560). Airport, Handoff are working correctly.
+This laptop comes with an Intel WiFi + Bluetooth combo so I replaced mine with BCM94352Z (DM1560). 
+Airport, Handoff are working correctly.
 
-###### Important: If you have an Intel card, remove BCM-related kexts and start from there.
+###### Important: If you have an Intel card, remove BCM-related kexts, rescan with ProperTree and start from there.
 
 #### Camera
 
@@ -47,9 +48,9 @@ Use USBInject-All.kext then with Hackintool disable all unused ports and generat
 
 Functioning normally.
 
-#### Display
+#### Display and External Monitors
 
-Working fine with hardware acceleration.
+Working fine with hardware acceleration. External monitors work fine with HDMI or VGA.
 
 #### Battery
 
@@ -67,7 +68,7 @@ Fn Keys not working. Also strange behavior sometimes after waking up, see Sleep.
 
 #### Touchpad
 
-Functioning with multigestures, but sometimes "teleports" doing certain gestures.
+Functioning with multigestures.
 
 #### Sleep and Wake
 
@@ -81,15 +82,14 @@ A workaround i've found is when the laptop wakes from sleep, do not press any ke
 
 Internal SD card Reader
 
-### Not tested
-
-HDMI output
 
 ## Additional info, quirks, findings, etc 
 
 `CtlnaAHCIPort` is absolutely necesary to Big Sur. Using `MinKernel` this kext only loads in BirSur 
 
 AirPortBrcm4360 only will load in Catalina (using `MaxKernel` = `19.9.9`). This kext makes Big Sur unable to boot.
+
+When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kext` from `VoodooPS2Controller.kext/Contents/PlugIns/`.
 
 <h2>Laptop Specs</h2>
 <table>
@@ -128,6 +128,18 @@ AirPortBrcm4360 only will load in Catalina (using `MaxKernel` = `19.9.9`). This 
 ![Captura de Pantalla 2021-07-29 a la(s) 11 16 35 a  m](https://user-images.githubusercontent.com/37314164/127522708-c5c77309-7c38-400f-8c13-59466aade2e3.png)
 
 ## Changelog
+
+##### 06/sep/2021:
+
+Now trackpad works using VoodooI2C, with a lot better experience using touchpad
+
+Updated to OpenCore 0.7.2
+
+Now completely cosmetic, no verbose or debug messages.
+
+OCvalidator shows no errors anymore.
+
+Switch from ugly XOSI to GPI0 for trackpad. 
 
 ##### 06/jul/2021:
 
