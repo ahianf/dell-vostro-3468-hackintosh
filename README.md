@@ -5,6 +5,10 @@
 
 
 
+## WARNING
+
+This repo is not maintained anymore, if you want to maintain it, please send me an mail. I no longer have this laptop.
+
 ## Important
 
 This repo has a lot of things specific to my laptop, for example all the ACPI tables. It should work in a identic computer, but maybe it won't.
@@ -93,7 +97,11 @@ Internal SD card Reader
 
 AirPortBrcm4360 only will load in Catalina (using `MaxKernel` = `19.9.9`). This kext makes Big Sur unable to boot.
 
-When updating, in order to use VoodooI2C without issues, delete `VoodooInput.kext` from `VoodooPS2Controller.kext/Contents/PlugIns/`.
+When updating your `config.plist`, in order to use VoodooI2C without issues, delete `VoodooInput.kext` from `VoodooPS2Controller.kext/Contents/PlugIns/`.
+
+You can change the laptop screen with a Latitude e7250 1080p ips. I don't have the exact screen model though.
+
+
 
 <h2>Laptop Specs</h2>
 <table>
